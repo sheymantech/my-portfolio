@@ -25,6 +25,7 @@ body {
   height: 100vh;
   max-width: 100%;
   margin-top: 1.5rem;
+  position: relative;
 }
 .hero-container {
   width: 90%;
@@ -141,6 +142,35 @@ img {
 .icon-inner-wrapper:hover i {
   color: #0a1828;
 }
+/* ------------header---styles--------------------------- */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 10%;
+  right: 4%;
+  background-color: #252e36a4;
+  padding: 3rem 1rem;
+  border-radius: 8px;
+}
+header i {
+  color: var(--secondary-color);
+  font-size: 30px;
+}
+.menu-icon-wrapper {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
 /* ---------------------teck stack session------------------------ */
 .tech-stack-container {
   width: 100%;
