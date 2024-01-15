@@ -51,8 +51,52 @@ img {
 .text-animate h4 {
   color: transparent;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 30px;
   -webkit-text-stroke: 0.08rem #178582;
+  background-repeat: no-repeat;
+  animation-delay: 0.5s;
+  animation: home-bg-text 6s linear infinite;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(#178582, #178582);
+  background-position: 0 0;
+  position: relative;
+  text-align: center;
+}
+@keyframes home-bg-text {
+  0%,
+  10%,
+  100% {
+    background-position: -33rem 0;
+  }
+  65%,
+  85% {
+    background-position: 0 0;
+  }
+}
+
+.text-animate h4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8%;
+  width: 0;
+  height: 100%;
+  border-right: 2px solid #178582;
+  z-index: -1;
+  animation: home-cursor-text 6s linear infinite;
+  animation-delay: 0.3s;
+}
+@keyframes home-cursor-text {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  65%,
+  75%,
+  85% {
+    width: 85%;
+  }
 }
 .hero-container p {
   word-spacing: 3px;
@@ -210,6 +254,20 @@ header i {
   font-weight: 600;
 }
 
+/* --------------about me section--------------------------- */
+.heading-wrapper h1 {
+  font-weight: 900;
+  font-size: 35px;
+}
+.heading-wrapper span {
+  color: var(--secondary-color);
+}
+.about-img img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid #178582;
+}
 @media only screen and (max-width: 800px) {
   .hero-section {
     height: auto;
@@ -253,5 +311,16 @@ header i {
   }
   header i {
     width: 25px;
+  }
+  .btn-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tech-stack-container {
+    margin-bottom: 20rem;
+  }
+  .about-me h1 {
+    margin-top: 5rem;
   }
 }
