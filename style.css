@@ -239,7 +239,7 @@ header i {
     bottom: 0;
     left: 50%;
     padding: 1rem;
-    width: 80%;
+    width: 90%;
     transform: translateX(-50%);
     flex-direction: row;
     border-radius: 1rem;
@@ -248,8 +248,8 @@ header i {
   }
   .menu-icon-wrapper {
     margin: 0rem auto;
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
   }
   header i {
     width: 25px;
