@@ -236,11 +236,22 @@ header i {
   }
   header {
     padding: 0;
-    bottom: 5%;
-    width: 100%;
+    bottom: 0;
+    left: 50%;
+    padding: 1rem;
+    width: 80%;
+    transform: translateX(-50%);
     flex-direction: row;
     border-radius: 1rem;
     justify-content: space-around;
     align-items: center;
+  }
+  .menu-icon-wrapper {
+    margin: 0rem auto;
+    height: 45px;
+    width: 45px;
+  }
+  header i {
+    width: 25px;
   }
 }
