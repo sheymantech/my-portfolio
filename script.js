@@ -1,4 +1,10 @@
 "use strict";
+const link = document.querySelectorAll("a");
+// link.forEach((btn) => {
+//   btn.addEventListener("click", function (e) {
+//     e.preventDefault();
+//   });
+// });
 // Tech stack section
 document.addEventListener("DOMContentLoaded", function () {
   const techItems = Array.from(document.querySelectorAll(".tech-item"));
