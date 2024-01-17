@@ -60,13 +60,13 @@ img {
   background-image: linear-gradient(#178582, #178582);
   background-position: 0 0;
   position: relative;
-  text-align: center;
+  text-align: left;
 }
 @keyframes home-bg-text {
   0%,
   10%,
   100% {
-    background-position: -33rem 0;
+    background-position: -40rem 0;
   }
   65%,
   85% {
@@ -78,7 +78,7 @@ img {
   content: "";
   position: absolute;
   top: 0;
-  left: 8%;
+  left: 0%;
   width: 0;
   height: 100%;
   border-right: 2px solid #178582;
@@ -93,9 +93,9 @@ img {
     width: 0;
   }
   65%,
-  75%,
-  85% {
-    width: 85%;
+  85%,
+  86% {
+    width: 58%;
   }
 }
 .hero-container p {
@@ -103,7 +103,7 @@ img {
   margin-bottom: 1.5rem;
   font-size: 18px;
 }
-.btn-hire {
+.btn-1 {
   background-color: var(--secondary-color);
   border: none;
   color: var(--primary-color);
@@ -114,7 +114,7 @@ img {
   position: relative;
   transition: 0.4s;
 }
-.btn-download-cv {
+.btn-2 {
   background-color: transparent;
   border: 2px solid #178582;
   color: #178582;
@@ -135,18 +135,18 @@ img {
   background-color: #178582;
   z-index: -1;
 }
-.btn-download-cv:hover::before {
+.btn-2:hover::before {
   width: 100%;
 }
-.btn-download-cv:hover {
+.btn-2:hover {
   color: #0a1828;
 }
-.btn-hire:hover {
+.btn-1:hover {
   background-color: transparent;
   border: 2px solid #178582;
   color: #178582;
 }
-.btn-hire:hover::before {
+.btn-1:hover::before {
   width: 100%;
   background-color: #0a1828;
 }
@@ -207,7 +207,6 @@ header i {
   font-size: 30px;
 }
 .menu-icon-wrapper {
-  background-color: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -215,6 +214,10 @@ header i {
   height: 55px;
   border-radius: 50%;
   margin-bottom: 2rem;
+  z-index: 2;
+}
+.active-menu {
+  background-color: var(--primary-color);
 }
 
 /* ---------------------teck stack session------------------------ */
@@ -255,6 +258,10 @@ header i {
 }
 
 /* --------------about me section--------------------------- */
+
+.about-me-sec {
+  padding-bottom: 2rem;
+}
 .heading-wrapper h1 {
   font-weight: 900;
   font-size: 35px;
@@ -262,11 +269,45 @@ header i {
 .heading-wrapper span {
   color: var(--secondary-color);
 }
+.about-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 .about-img img {
-  width: 180px;
-  height: 180px;
   border-radius: 50%;
   border: 2px solid #178582;
+  width: 90%;
+  height: 90%;
+}
+.animate-img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-top: 2px solid #0a1828;
+  border-bottom: 2px solid #0a1828;
+  border-left: 2px solid #178582;
+  border-right: 2px solid #178582;
+  border-radius: 50%;
+  animation: aboutAnimate 6s linear infinite;
+}
+
+@keyframes aboutAnimate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.about-me-sec p {
+  padding: 3rem 0 0 0;
+  text-align: left;
+  font-size: 18px;
+  word-spacing: 3px;
 }
 @media only screen and (max-width: 800px) {
   .hero-section {
@@ -283,6 +324,9 @@ header i {
   p {
     text-align: center;
     margin-bottom: 0.8rem;
+  }
+  .text-animate h4 {
+    text-align: center;
   }
   .hero-container {
     width: 100%;
@@ -322,5 +366,26 @@ header i {
   }
   .about-me h1 {
     margin-top: 5rem;
+  }
+  .about-me-sec p {
+    padding: 3rem 0.7rem 1rem 0.7rem;
+  }
+  .btn-about {
+    padding: 0rem 0.7rem;
+  }
+  .text-animate h4::before {
+    left: 8%;
+  }
+  @keyframes home-cursor-text {
+    0%,
+    10%,
+    100% {
+      width: 0;
+    }
+    65%,
+    85%,
+    86% {
+      width: 85%;
+    }
   }
 }
