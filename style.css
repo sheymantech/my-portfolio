@@ -302,8 +302,8 @@ header i {
   top: 0;
   left: 0;
   bottom: 0;
-  border-top: 2px solid --primary-color;
-  border-bottom: 2px solid --primary-color;
+  border-top: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
   border-left: 2px solid #178582;
   border-right: 2px solid #178582;
   border-radius: 50%;
