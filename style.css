@@ -372,6 +372,7 @@ header i {
   color: #a17b54;
   font-weight: bold;
   text-align: left;
+  word-spacing: 2px;
 }
 .btn-portfolio i {
   font-size: 25px;
@@ -383,6 +384,35 @@ header i {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* ---------------------contact me-------------------- */
+.contact-me p {
+  word-spacing: 2px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.contact-box {
+  background-color: var(--primary-color);
+  padding: 0.8rem 1.3rem;
+  border-radius: 1rem;
+  border: 1px solid #178582;
+  margin-top: 1.5rem;
+}
+.contact-box:hover {
+  box-shadow: 0 0 22px 1px #17858150;
+  border: none;
+}
+.contact-box i {
+  color: var(--secondary-color);
+  font-size: 35px;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-box .btn-2:hover {
+  background-color: var(--secondary-color);
 }
 
 @media only screen and (max-width: 800px) {
