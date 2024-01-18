@@ -1,10 +1,20 @@
 "use strict";
-const link = document.querySelectorAll("a");
-// link.forEach((btn) => {
-//   btn.addEventListener("click", function (e) {
-//     e.preventDefault();
-//   });
-// });
+const footerContainer = document.querySelector(".footer-content");
+
+// footer DOM  Manipulation
+
+const footerDOM = function (container) {
+  const newDate = new Date();
+  const year = newDate.getFullYear();
+  const footerHtml = `
+<hr>
+<p>&copy; ${year} All right reserved, built by olaniyan sheyi.</p>
+`;
+
+  container.insertAdjacentHTML("afterbegin", footerHtml);
+};
+footerDOM(footerContainer);
+
 // Tech stack section
 document.addEventListener("DOMContentLoaded", function () {
   const techItems = Array.from(document.querySelectorAll(".tech-item"));

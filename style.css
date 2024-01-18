@@ -22,6 +22,7 @@ body {
   background-color: var(--primary-color);
   padding: 0;
   margin: 0;
+  padding-bottom: 4rem;
 }
 .hero-section {
   height: 100vh;
@@ -413,6 +414,15 @@ header i {
 
 .contact-box .btn-2:hover {
   background-color: var(--secondary-color);
+}
+/* --------------------footer section--------------------------------- */
+footer {
+  margin-bottom: 1.4rem;
+}
+footer hr {
+  width: 100%;
+  border: 2px solid #a17b54;
+  border-radius: 8px;
 }
 
 @media only screen and (max-width: 800px) {
