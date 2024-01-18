@@ -53,6 +53,33 @@ menuBtn.forEach((btn) => {
 //   console.log(section);
 // });
 
+// animation implementation
+
+const secObserver = function (entries, observer) {
+  entries.forEach((entry, index) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.style.animation = "showRight 1s ease forwards";
+      entry.target.style.animationDelay = `calc(0.1s * ${index + 1})`;
+      entry.target.style.opacity = 1;
+    } else {
+      entry.target.style.animation = "none";
+      entry.target.style.opacity = 0;
+    }
+  });
+};
+
+const observer = new IntersectionObserver(secObserver, {
+  root: null,
+  threshold: 0.1,
+});
+
+const elements = document.querySelectorAll(".animation");
+
+elements.forEach((element) => {
+  observer.observe(element);
+});
+
 // mode changer implementation
 modeToggler.addEventListener("click", function () {
   const root = document.documentElement;

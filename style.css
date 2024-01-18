@@ -59,6 +59,9 @@ img {
   font-weight: 900;
   font-size: 35px;
 }
+.text-animate {
+  position: relative;
+}
 .text-animate h4 {
   color: transparent;
   font-weight: 700;
@@ -161,8 +164,12 @@ img {
   width: 100%;
   background-color: #0a1828;
 }
+.btn-action {
+  position: relative;
+}
 .hero-icon-wrapper {
   display: flex;
+  position: relative;
 }
 .icon-inner-wrapper {
   margin-right: 1rem;
@@ -384,6 +391,7 @@ header i {
   font-weight: bold;
   text-align: left;
   word-spacing: 2px;
+  padding: 0 !important;
 }
 .btn-portfolio i {
   font-size: 25px;
@@ -435,6 +443,66 @@ footer hr {
   border-radius: 8px;
 }
 
+/* --------------------animation-------------- */
+.hero-para {
+  position: relative;
+}
+.btn-about {
+  position: relative;
+}
+.heading-wrapper {
+  position: relative;
+}
+.about-para {
+  position: relative;
+}
+.stack-list {
+  position: relative;
+}
+.portfolio-container {
+  position: relative;
+}
+.contact-box {
+  position: relative;
+}
+.contact-para {
+  position: relative;
+}
+.animation {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--primary-color);
+  z-index: 998;
+  opacity: 0;
+}
+.name {
+  position: relative;
+}
+.name .animation,
+.hero-para .animation,
+.text-animate .animation,
+.btn-action .animation,
+.hero-icon-wrapper .animation,
+.heading-wrapper .animation,
+.about-para .animation,
+.btn-about .animation,
+header .animation,
+.stack-list .animation,
+.about-img .animation,
+.portfolio-container .animation,
+.contact-box .animation,
+.contact-para .animation {
+  /* animation: showRight 1s ease forwards;
+  animation-delay: calc(0.3s * var(--i)); */
+}
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
+}
 @media only screen and (max-width: 800px) {
   .hero-section {
     height: auto;
