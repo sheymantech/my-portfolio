@@ -1,5 +1,8 @@
 "use strict";
 const footerContainer = document.querySelector(".footer-content");
+const menuBtn = document.querySelectorAll(".menu-icon-wrapper");
+const sections = document.querySelectorAll("section");
+const modeToggler = document.getElementById("mode");
 
 // footer DOM  Manipulation
 
@@ -8,12 +11,70 @@ const footerDOM = function (container) {
   const year = newDate.getFullYear();
   const footerHtml = `
 <hr>
-<p>&copy; ${year} All right reserved, built by olaniyan sheyi.</p>
+<p class="text-center">&copy; ${year} All right reserved, built by olaniyan sheyi.</p>
 `;
 
   container.insertAdjacentHTML("afterbegin", footerHtml);
 };
 footerDOM(footerContainer);
+
+// header functionality implementeation
+menuBtn.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    menuBtn.forEach((btn) => {
+      btn.classList.remove("active-menu");
+    });
+    this.classList.add("active-menu");
+  });
+});
+
+//intersection observer
+
+// const secObserver = function (entries, observer) {
+//   entries.forEach((entry) => {
+//     // console.log(entry);
+//     const curSection = entry.target.id;
+//     const curLink = document.querySelector(`a[href="#${curSection}"]`);
+//     if (entry.isIntersecting) {
+//       curLink.closest(".menu-icon-wrapper").classList.add("active-menu");
+//     } else {
+//       curLink.closest(".menu-icon-wrapper").classList.remove("active-menu");
+//     }
+//   });
+// };
+
+// const observer = new IntersectionObserver(secObserver, {
+//   root: null,
+//   threshold: 0.5,
+// });
+
+// sections.forEach((section) => {
+//   observer.observe(section);
+//   console.log(section);
+// });
+
+// mode changer implementation
+modeToggler.addEventListener("click", function () {
+  const root = document.documentElement;
+  const isDarkMode = root.classList.toggle("dark-mode");
+  if (isDarkMode) {
+    root.style.setProperty("--primary-color", "#f4f6f9");
+    root.style.setProperty("--secondary-color", "#009688");
+    root.style.setProperty("--tertiary-color", "#3e3e3e");
+    root.style.setProperty("--sub-color-color", "#f4f6f9");
+    document.querySelector("header").style.backgroundColor = "#f4f6f9";
+    document.querySelector(".stack-list").style.backgroundColor = "#f4f6f9";
+  } else {
+    root.style.setProperty("--primary-color", "#0a1828");
+    root.style.setProperty("--secondary-color", "#178582");
+    root.style.setProperty("--tertiary-color", "#bfa181");
+    root.style.setProperty("--sub-color-color", "#252e36e1");
+    document.querySelector("header").style.backgroundColor = "#252e36e1";
+    document.querySelector(".stack-list").style.backgroundColor = "#252e36e1";
+  }
+  console.log(root);
+  console.log(isDarkMode);
+});
 
 // Tech stack section
 document.addEventListener("DOMContentLoaded", function () {

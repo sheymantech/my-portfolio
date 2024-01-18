@@ -4,11 +4,21 @@
   margin: 0;
   font-family: "Bai Jamjuree", sans-serif;
 }
+
 :root {
   --primary-color: #0a1828;
   --secondary-color: #178582;
   --tertiary-color: #bfa181;
+  --sub-color: #252e36e1;
 }
+
+body.dark-mode {
+  --primary-color: #f4f6f9; /* Light mode primary color (light background) */
+  --secondary-color: #009688; /* Light mode secondary color (teal) */
+  --tertiary-color: #3e3e3e;
+  --sub-color: #f4f6f9;
+}
+
 h1,
 h2,
 h3,
@@ -199,7 +209,7 @@ header {
   position: fixed;
   bottom: 10%;
   right: 4%;
-  background-color: #252e36e1;
+  background-color: var(--sub-color);
   padding: 3rem 1rem;
   border-radius: 8px;
   z-index: 999;
@@ -292,8 +302,8 @@ header i {
   top: 0;
   left: 0;
   bottom: 0;
-  border-top: 2px solid #0a1828;
-  border-bottom: 2px solid #0a1828;
+  border-top: 2px solid --primary-color;
+  border-bottom: 2px solid --primary-color;
   border-left: 2px solid #178582;
   border-right: 2px solid #178582;
   border-radius: 50%;
@@ -318,7 +328,7 @@ header i {
   justify-content: center;
   align-items: center;
   margin-top: 1.5rem;
-  background-color: #252e36e1;
+  background-color: var(--sub-color);
   border-radius: 0.8rem;
   padding: 3rem 0rem;
   flex-direction: column;
