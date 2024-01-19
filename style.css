@@ -349,7 +349,12 @@ header i {
 }
 .stack-list p {
   font-size: 15px;
+  /* color: red; */
   color: #a17b54;
+  /* margin-top: 0 !important;
+  padding: 0 !important; */
+}
+.ex-para {
 }
 .stack-list i {
   color: var(--secondary-color);

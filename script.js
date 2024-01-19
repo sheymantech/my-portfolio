@@ -57,7 +57,7 @@ menuBtn.forEach((btn) => {
 
 const secObserver = function (entries, observer) {
   entries.forEach((entry, index) => {
-    console.log(entry);
+    // console.log(entry);
     if (entry.isIntersecting) {
       entry.target.style.animation = "showRight 1s ease forwards";
       entry.target.style.animationDelay = `calc(0.1s * ${index + 1})`;
