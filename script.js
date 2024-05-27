@@ -99,8 +99,6 @@ modeToggler.addEventListener("click", function () {
     document.querySelector("header").style.backgroundColor = "#252e36e1";
     document.querySelector(".stack-list").style.backgroundColor = "#252e36e1";
   }
-  console.log(root);
-  console.log(isDarkMode);
 });
 
 // Tech stack section
